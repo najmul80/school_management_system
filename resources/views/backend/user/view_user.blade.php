@@ -22,6 +22,7 @@
 											<th>Roll</th>
 											<th>Name</th>
 											<th>Email</th>
+											<th>Code</th>
 											<th>Action</th>
 										</tr>
 									</thead>
@@ -29,9 +30,10 @@
 										@foreach($users as $user)
 										<tr>
 											<th>{{$loop->iteration}}</th>
-											<th>{{$user->usertype}}</th>
+											<th>{{$user->role}}</th>
 											<th>{{$user->name}}</th>
 											<th>{{$user->email}}</th>
+											<th>{{$user->code}}</th>
 											<th>
 												<a href="{{route('user.edit',['id'=> $user->id])}}" class="btn btn-info">Edit</a>
 												<a href="javascript:;" data-form-id="user-delete-{{$user->id}}" class="btn btn-danger sa-delete">Delete</a>
@@ -49,6 +51,7 @@
 											<th>Roll</th>
 											<th>Name</th>
 											<th>Email</th>
+											<th>Code</th>
 											<th>Action</th>
 										</tr>
 									</tfoot>

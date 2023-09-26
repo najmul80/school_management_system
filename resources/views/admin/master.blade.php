@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+	<meta name="csrf-token" content="{{ csrf_token() }}" />
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -394,6 +395,7 @@
 	@yield('script')
 	<!-- Sunny Admin App -->
 	<script src="{{asset('/')}}assets/js/template.js"></script>
+	<script src="{{asset('/')}}assets/js/2handlebars.min.js"></script>
 	<script src="{{asset('/')}}assets/js/pages/dashboard.js"></script>
 
 

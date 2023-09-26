@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function userView()
     {
-        $this->users = User::all();
+        $this->users = User::where('usertype','Admin')->get();
         return view('backend.user.view_user',[
             'users' => $this->users
         ]);
